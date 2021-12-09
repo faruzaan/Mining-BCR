@@ -15,9 +15,8 @@ class CreateTbDevices extends Migration
     {
         Schema::create('tb_devices', function (Blueprint $table) {
             $table->increments('id_device');
+            $table->string('brand', 100)->nullable()->default('text');
             $table->string('nama_device', 100)->nullable()->default('text');
-            $table->decimal('hashrate_device', 8, 2)->nullable()->default(123.45);
-            $table->integer('watt_device')->unsigned()->nullable()->default(12);
             $table->timestamps();
         });
     }
