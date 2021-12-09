@@ -25,3 +25,13 @@ Anggota dari pengerjaan project ini sendiri terdiri dari
 - Rizky Sanjaya Tandia
 - Arif Rahman Pamungkas
 
+## Cara Menjalankan Program
+
+- Download/Clone Repo ini
+- Buka cmd pada folder hasil download/clone
+- pada cmd jalankan "composer install"
+- jalankan lagi "cp .env.example .env"
+- jalankan lagi "php artisan key:generate"
+- setting file .env
+- buat database "loginfo"
+- 
