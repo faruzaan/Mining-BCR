@@ -34,4 +34,4 @@ Anggota dari pengerjaan project ini sendiri terdiri dari
 - jalankan lagi "php artisan key:generate"
 - setting file .env
 - buat database "loginfo"
-- 
+- Import database
