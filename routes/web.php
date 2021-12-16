@@ -27,4 +27,7 @@ Route::get('/algo/{id}',[HashrateController::class, 'indexspec']);
 Route::post('/algo/add',[HashrateController::class, 'store']);
 
 Route::get('/calculate',[CalcController::class, 'index']);
-Route::post('/calculate/result',[CalcController::class, 'result']);
+Route::post('/calculate',[CalcController::class, 'result']);
+
+Route::get('/compare',[CalcController::class, 'compare']);
+Route::post('/compare',[CalcController::class, 'comparehasil']);

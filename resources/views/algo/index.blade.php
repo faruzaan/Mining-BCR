@@ -110,10 +110,10 @@
                 @foreach ($result as $row)
                 <tr>
                     <td>{{$row->device->nama_device}}</td>
-                    <td>{{$row->hashrate}}</td>
+                    <td>{{$row->hashrate}} Mh/s</td>
                     <td>{{$row->algo}}</td>
-                    <td>{{$row->blockReward}}</td>
-                    <td>{{$row->difficulity}}</td>
+                    <td>$ {{$reward}}</td>
+                    <td>{{$difficulity}}</td>
                     <td>{{$row->watt}}</td>
                     <td>{{$row->difficulity}}</td>
                 </tr>

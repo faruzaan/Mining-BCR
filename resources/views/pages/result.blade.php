@@ -6,4 +6,5 @@
     <p>Watt : {{$algo->watt}}</p>
     <p>Pendapatan Perhari : ${{$benefit}}</p>
     <p>Listrik Perhari : ${{$cost}}</p>
+    <p>difficulty : ${{$difficulity}}</p>
 @endsection

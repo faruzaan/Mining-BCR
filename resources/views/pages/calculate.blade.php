@@ -29,7 +29,7 @@
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form action="{{url('/calculate/result')}}" method="POST">
+            <form action="{{url('/calculate')}}" method="POST">
               {{ csrf_field() }}
               <div class="card-body">
                 <div class="form-group">
@@ -58,7 +58,52 @@
         </div>
         <!--/.col (left) -->
 
+        @isset($algo)
+        <!-- right column -->
+        <div class="col-md-6">
+          <!-- general form elements -->
+          <div class="card card-success">
+            <div class="card-header">
+              <h3 class="card-title">{{$algo->device->nama_device}}</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Device</label>
+                  <input type="text" class="form-control" disabled value="{{$algo->device->nama_device}}">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Algorithm</label>
+                  <input type="text" class="form-control" disabled value="{{$algo->algo}}">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Hashrate</label>
+                  <input type="text" class="form-control" disabled value="{{$algo->hashrate}}">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Watt</label>
+                  <input type="text" class="form-control" disabled value="{{$algo->watt}}">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Pendapatan Perhari ($)</label>
+                  <input type="text" class="form-control" disabled value="$ {{$benefit}}">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Biaya Listrik Perhari ($)</label>
+                  <input type="text" class="form-control" disabled value="$ {{$cost}}">
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </form>
+          </div>
+          <!-- /.card -->
+
+        </div>
         <!--/.col (right) -->
+        @endisset
+
       </div>
       <!-- /.row -->
     </div><!-- /.container-fluid -->
