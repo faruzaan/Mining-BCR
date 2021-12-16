@@ -72,16 +72,16 @@
         <h3 class="text-center mb-5">Your approx. income</h3>
         <div class="row">
             <div class="col-md-5">
-                <h2 class="text-center">{{$algo1->device->nama_device}}</h2>
-                <h1 class="text-center">{{$benefit1 - $cost1}} USD/Day</h1>
+                <h2 class="text-center" >{{$algo1->device->nama_device}}</h2>
+                <h1 class="text-center" >{{$benefit1 - $cost1}} USD/Day</h1>
             </div>
             <div class="vl" style="border-left: 5px solid rgb(173, 173, 173);"></div>
             <div class="col-md-5">
                 <h2 class="text-center">{{$algo2->device->nama_device}}</h2>
-                <h1 class="text-center">{{$benefit2 - $cost1}} USD/Day</h1>
+                <h1 class="text-center" >{{$benefit2 - $cost2}} USD/Day</h1>
             </div>
         </div>
-        <p class="mb-5">*Please note that values are only estimates based on past performance - real values can be lower or higher. Exchange rate of 1 BTC = 701048912.67 IDR was used.</p>
+        <p class="mb-5">*Please note that values are only estimates based on past performance - real values can be lower or higher. Exchange rate of 1 RVN = {{$rate}} USD was used.</p>
         <h3 class="text-center mb-3">Past earnings of your setup</h3>
         <div class="row">
             <div class="col-md-6">

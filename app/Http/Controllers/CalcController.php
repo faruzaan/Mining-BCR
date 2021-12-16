@@ -35,15 +35,16 @@ class CalcController extends Controller
         $api = json_decode(Http::get('https://rvn.2miners.com/api/blocks'));
         $data['difficulity'] = $api->immature[0]->difficulty;
         $rate = json_decode(Http::get('https://api2.nicehash.com/exchange/api/v2/info/prices'));
+        $data['rate'] = $rate->RVNUSDT;
 
         $data['algo1'] = \App\Models\Hashrate::where('id_device',$request->config1)->first();
         $data['cost1'] = $data['algo1']->watt/1000*24*$request['elcost'];
         $data['benefit1'] = $data['algo1']->hashrate*5000*24/$data['difficulity']*$rate->RVNUSDT;
         $data['result1'] = $data['benefit1']/$data['cost1'];
 
-        $data['algo2'] = \App\Models\Hashrate::where('id_device',$request->config1)->first();
-        $data['cost2'] = $data['algo1']->watt/1000*24*$request['elcost'];
-        $data['benefit2'] = $data['algo1']->hashrate*5000*24/$data['difficulity']*$rate->RVNUSDT;
+        $data['algo2'] = \App\Models\Hashrate::where('id_device',$request->config2)->first();
+        $data['cost2'] = $data['algo2']->watt/1000*24*$request['elcost'];
+        $data['benefit2'] = $data['algo2']->hashrate*5000*24/$data['difficulity']*$rate->RVNUSDT;
         $data['result2'] = $data['benefit2']/$data['cost2'];
 
         return view('pages/compare')->with($data);
